@@ -1,0 +1,22 @@
+<!--pages/ordernum/orderNum.wxml-->
+<!--pages/orderNum/orderNum.wxml-->
+
+<view class="main">
+<view class="orders-box"> 
+        <view class="orders">我的订单</view>
+        <view class="orders-list" wx:for="{{orders}}" wx:key="index">
+            <view class="orders-number">订单编号：A{{item.num}}</view>
+            <view class="orders-detail">
+                <image src="{{item.image}}"></image>
+                <view class="">{{item.title}}</view>
+                <view class="">{{item.count}}</view>
+                <text class="orders-status">{{item.status}}</text>
+            </view>
+            <view class="orders-footer">
+                <text>实付：￥{{item.price}}</text>
+                <button size="mini" class="orders-btn" bindtap="payOrders">收货</button>
+            </view>
+        </view>
+    </view>
+</view>
+
